@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostmarkServerController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserConteroller;
 use App\Http\Controllers\StoreConteroller;
@@ -29,6 +30,7 @@ Route::group([
     Route::post('logout', [AuthController::class,'logout']);
     Route::post('refresh', [AuthController::class,'refresh']);
     Route::get('auth-info', [AuthController::class,'authInfo']);
+    Route::get('api-overview', [PostmarkServerController::class,'getOverview']);
 
     Route::middleware('auth:api')->group(function(){
         

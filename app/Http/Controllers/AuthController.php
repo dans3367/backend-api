@@ -111,7 +111,7 @@ class AuthController extends Controller
             'expires_in' => config('jwt.ttl') * 60
         ];
         
-        return $this->sendResponse($data,'Sucessfully generated token',ApplicationStatus::SUCCESS);
+        return $this->sendResponse($data,'Successfully generated token',ApplicationStatus::SUCCESS);
     }
 
 
